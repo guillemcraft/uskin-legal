@@ -23,7 +23,7 @@
   --r:    32px;
   --r-sm: 20px;
 
-  --display: 'General Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  --display: 'Onest', 'Helvetica Neue', Helvetica, sans-serif;
   --body:    'Switzer', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --ease: cubic-bezier(.2,.7,.2,1);
@@ -61,10 +61,14 @@ ul, ol { list-style: none; }
 
 h1, h2, h3, .num, .price-figure b {
   font-family: var(--display);
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -.032em;
   line-height: 1.02;
 }
+
+/* Display sizes sit at Regular. At 3rem and up the extra weight reads as
+   shouting; lovi.care sets its whole hero at 400 for the same reason. */
+.hero h1, .sec-head h2, .faq-h, .closer h2, .words, .foot-big { font-weight: 400; }
 
 :focus-visible {
   outline: 2px solid var(--teal-dk);
@@ -130,7 +134,7 @@ h1, h2, h3, .num, .price-figure b {
 .pill-btn {
   display: inline-flex; align-items: center; justify-content: center;
   min-width: 168px; padding: 17px 40px;
-  font-family: var(--display); font-size: 20px; font-weight: 600; letter-spacing: -.02em;
+  font-family: var(--display); font-size: 20px; font-weight: 500; letter-spacing: -.02em;
   border-radius: 999px;
   background: var(--ink); color: #fff;
   transition: transform .28s var(--ease), background .28s var(--ease), color .28s;
@@ -164,8 +168,8 @@ h1, h2, h3, .num, .price-figure b {
 .hero h1 {
   margin: clamp(20px, 3vw, 30px) auto 0;
   font-size: clamp(3.1rem, 9vw, 7rem);
-  line-height: .97;
-  letter-spacing: -.042em;
+  line-height: .94;
+  letter-spacing: -.03em;
   max-width: 16ch;
 }
 .hero .lede {
@@ -289,9 +293,8 @@ h1, h2, h3, .num, .price-figure b {
 .words {
   font-family: var(--display);
   font-size: clamp(1.75rem, 4.3vw, 3.5rem);
-  font-weight: 500;
   line-height: 1.16;
-  letter-spacing: -.035em;
+  letter-spacing: -.028em;
   max-width: 22ch;
 }
 .words .w { opacity: .13; will-change: opacity; }
@@ -302,7 +305,8 @@ h1, h2, h3, .num, .price-figure b {
 .sec-head { max-width: var(--max); margin: 0 auto clamp(34px, 4.5vw, 60px); }
 .sec-head h2 {
   font-size: clamp(2.15rem, 5vw, 3.9rem);
-  letter-spacing: -.038em;
+  letter-spacing: -.03em;
+  line-height: 1.04;
 }
 .sec-head p {
   margin-top: 18px;
@@ -340,7 +344,7 @@ h1, h2, h3, .num, .price-figure b {
 .feat.wide { grid-column: 1 / -1; min-height: 520px; }
 .feat-title {
   font-size: clamp(1.6rem, 2.5vw, 2.35rem);
-  letter-spacing: -.035em;
+  letter-spacing: -.028em;
   line-height: 1.08;
 }
 .feat-visual {
@@ -462,7 +466,7 @@ h1, h2, h3, .num, .price-figure b {
 .metrics b {
   font-family: var(--display);
   font-size: clamp(1.3rem, 2.2vw, 1.9rem);
-  font-weight: 600; letter-spacing: -.03em;
+  font-weight: 500; letter-spacing: -.03em;
 }
 .metrics span { color: var(--ink-2); font-size: clamp(1rem, 1.25vw, 1.1rem); }
 .score-note {
@@ -552,7 +556,7 @@ h1, h2, h3, .num, .price-figure b {
   max-width: 900px; margin: 0 auto;
   padding: clamp(80px, 11vw, 150px) var(--pad) 0;
 }
-.faq-h { font-size: clamp(2.15rem, 5vw, 3.9rem); margin-bottom: clamp(28px, 3.5vw, 46px); }
+.faq-h { font-size: clamp(2.15rem, 5vw, 3.9rem); letter-spacing: -.03em; margin-bottom: clamp(28px, 3.5vw, 46px); }
 .faq details { border-top: 1px solid var(--line); }
 .faq details:last-child { border-bottom: 1px solid var(--line); }
 .faq summary {
@@ -561,7 +565,7 @@ h1, h2, h3, .num, .price-figure b {
   padding: clamp(20px, 2.3vw, 28px) 0;
   font-family: var(--display);
   font-size: clamp(1.15rem, 1.9vw, 1.5rem);
-  font-weight: 600; letter-spacing: -.028em;
+  font-weight: 500; letter-spacing: -.028em;
   transition: color .3s var(--ease);
 }
 .faq summary::-webkit-details-marker { display: none; }
@@ -596,8 +600,8 @@ h1, h2, h3, .num, .price-figure b {
 }
 .closer h2 {
   font-size: clamp(2.4rem, 6.6vw, 5rem);
-  letter-spacing: -.042em;
-  line-height: 1.0;
+  letter-spacing: -.03em;
+  line-height: .98;
 }
 .yesno {
   margin-top: clamp(32px, 4vw, 48px);
@@ -619,9 +623,8 @@ footer.site {
   max-width: var(--max); margin: 0 auto; padding: 0 var(--pad);
   font-family: var(--display);
   font-size: clamp(1.7rem, 4.4vw, 3.4rem);
-  font-weight: 500;
   line-height: 1.16;
-  letter-spacing: -.038em;
+  letter-spacing: -.03em;
 }
 .foot-big a {
   color: var(--teal-dk);
