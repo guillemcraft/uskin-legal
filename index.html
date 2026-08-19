@@ -2,152 +2,202 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>USkin — AI skin analysis & cosmetics scanner for iPhone</title>
-<meta name="description" content="Take a selfie for an instant AI skin score across six metrics, then scan any skincare product to see whether it actually fits your skin. Free on the App Store.">
-<meta name="theme-color" content="#FAF8F5">
-<meta property="og:title" content="USkin — Your skin, finally understood.">
-<meta property="og:description" content="An AI skin score from a selfie, plus a product scanner that knows your skin. Now on the App Store.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>USkin — AI Skin &amp; Cosmetics Scanner</title>
+<meta name="description" content="One selfie, six metrics, zero jargon. USkin reads your skin, scans any product, and tracks how you change over time. Free on the App Store.">
+<link rel="icon" href="assets/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://uskincare.eu/">
+<meta property="og:title" content="USkin — AI Skin &amp; Cosmetics Scanner">
+<meta property="og:description" content="One selfie, six metrics, zero jargon. USkin reads your skin, scans any product, and tracks how you change over time.">
 <meta property="og:image" content="https://uskincare.eu/assets/icon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="apple-itunes-app" content="app-id=6778808846">
-<link rel="canonical" href="https://uskincare.eu/">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f%5B%5D=general-sans@500,600,700&f%5B%5D=switzer@400,500,600&display=swap">
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "USkin - Face Scanner",
-  "operatingSystem": "iOS 16.4+",
-  "applicationCategory": "HealthApplication",
-  "url": "https://apps.apple.com/app/id6778808846",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-}
-</script>
 </head>
 <body>
-<div class="shell">
 
-  <nav class="top" id="nav">
-    <a class="brand" href="/"><img src="assets/icon.png" alt=""><b>USkin</b></a>
-    <div class="nav-links">
-      <a href="#how" class="hide-sm">How it works</a>
-      <a href="#features" class="hide-sm">Features</a>
-      <a href="#pricing" class="hide-sm">Pricing</a>
-      <a class="btn-nav" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">Download</a>
-    </div>
-  </nav>
+<nav id="nav">
+  <a class="brand" href="/" aria-label="USkin home">
+    <img src="assets/icon.png" alt="" width="34" height="34">
+    <b>USkin</b>
+  </a>
+  <a class="btn-store sm" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+    <span><small>Download on the</small><b>App Store</b></span>
+  </a>
+</nav>
 
-  <!-- HERO -->
+<main>
+
+  <!-- ================= HERO ================= -->
   <header class="hero">
-    <div class="hero-copy">
-      <div class="eyebrow reveal d1">Now on the App Store</div>
-      <h1 class="reveal d2">Your skin,<br>finally <em>understood.</em></h1>
-      <p class="lede reveal d3">Take a selfie for an instant AI skin score across six metrics — then scan any product to see whether it actually fits <em>your</em> skin. No clutter, no jargon.</p>
-      <div class="cta-row reveal d4">
-        <a class="btn-store" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener" aria-label="Download USkin on the App Store">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-          <span><small>Download on the</small><b>App Store</b></span>
-        </a>
-        <div class="cta-meta">
-          <span class="dot-free">Free to download</span>
-          <span>3-day free trial · iPhone</span>
+    <a class="badge lift1" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">
+      <img src="assets/icon.png" alt="" width="22" height="22">
+      Now on the App Store
+      <svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <h1 class="lift2">Your skin,<br>finally<br><span class="ink-teal">understood.</span></h1>
+    <p class="lede lift3">One selfie. Six metrics. Zero jargon.</p>
+
+    <div class="hero-cta lift4">
+      <a class="btn-store" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener" aria-label="Download USkin on the App Store">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+        <span><small>Download on the</small><b>App Store</b></span>
+      </a>
+      <p class="hero-meta">Free to download · 3-day trial · iPhone, iOS 16.4+</p>
+    </div>
+
+    <div class="stage lift5">
+      <div class="stage-fade">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="phone">
+          <img src="assets/screen-score.png" alt="The USkin score screen showing a skin score of 78 with a breakdown by metric" width="415" height="900" fetchpriority="high">
         </div>
       </div>
-    </div>
-    <div class="hero-visual reveal d3">
-      <img class="float-icon" src="assets/icon.png" alt="">
-      <div class="phone"><img src="assets/screen-score.png" alt="The USkin score screen showing a skin score of 78 with metric breakdowns" width="300" height="649"></div>
-      <div class="blob-badge">
-        <div class="ring"><i>78</i></div>
-        <div><b>Great skin</b><small>Hydration 80 · Pores 75</small></div>
+      <div class="chip chip-a" aria-hidden="true">
+        <span class="ring"><i>78</i></span>
+        <span class="chip-txt"><b>Great skin</b><small>Hydration 80 · Pores 75</small></span>
+      </div>
+      <div class="chip chip-b" aria-hidden="true">
+        <span class="pulse"></span> Scanning… 6 metrics
       </div>
     </div>
   </header>
 
-  <!-- STRIP -->
-  <div class="strip">
-    <div><b>6</b> skin metrics</div>
-    <div><b>1</b> selfie</div>
-    <div><b>~10s</b> to a result</div>
-    <div><b>0</b> guesswork</div>
-  </div>
+  <!-- ================= STATEMENT ================= -->
+  <section class="statement">
+    <p class="words" id="statement">USkin is a complete read on your skin. Take one selfie for a score across six metrics, scan any product to see whether it actually fits you, and watch the numbers move week after week.</p>
+  </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="section" id="how">
-    <div class="section-head">
-      <h2>Three taps to a routine that fits.</h2>
-      <p>No forms to fill in, no dermatologist appointment, no scrolling reviews written for someone else's face.</p>
+  <!-- ================= FEATURE: FACE SCAN ================= -->
+  <section class="cards" id="features">
+
+    <article class="feat rise">
+      <div class="feat-visual scan-visual">
+        <div class="phone sm">
+          <img src="assets/screen-score.png" alt="USkin skin score breakdown" width="415" height="900" loading="lazy">
+        </div>
+        <div class="marquees" aria-hidden="true">
+          <div class="marquee">
+            <div class="track">
+              <span class="pill">Hydration</span><span class="pill">Evenness</span><span class="pill">Pores</span><span class="pill">Redness</span><span class="pill">Wrinkles</span><span class="pill">Dark circles</span>
+              <span class="pill">Hydration</span><span class="pill">Evenness</span><span class="pill">Pores</span><span class="pill">Redness</span><span class="pill">Wrinkles</span><span class="pill">Dark circles</span>
+            </div>
+          </div>
+          <div class="marquee rev">
+            <div class="track">
+              <span class="pill ghost">0–100 score</span><span class="pill ghost">Focus areas</span><span class="pill ghost">Front camera</span><span class="pill ghost">~10 seconds</span><span class="pill ghost">No forms</span>
+              <span class="pill ghost">0–100 score</span><span class="pill ghost">Focus areas</span><span class="pill ghost">Front camera</span><span class="pill ghost">~10 seconds</span><span class="pill ghost">No forms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="feat-title">Read your whole face<br>in about ten seconds</h2>
+    </article>
+
+    <article class="feat tint-teal rise">
+      <div class="feat-visual product-visual">
+        <div class="phone sm">
+          <img src="assets/screen-product.png" alt="USkin product safety screen showing an ingredient breakdown" width="415" height="900" loading="lazy">
+        </div>
+        <ul class="verdicts">
+          <li class="verdict good"><b>Fits your skin</b><small>Based on your last scan</small></li>
+          <li class="verdict warn"><b>Worth knowing</b><small>Fragrance high in the list</small></li>
+          <li class="verdict"><b>Plain language</b><small>No chemistry degree needed</small></li>
+        </ul>
+      </div>
+      <h2 class="feat-title">Know what's in it<br>before you buy it</h2>
+    </article>
+
+    <article class="feat wide rise">
+      <div class="feat-visual track-visual">
+        <div class="months" aria-hidden="true">
+          <span>Jan</span><span>Feb</span><span class="on">Mar</span><span>Apr</span><span class="on">May</span><span>Jun</span><span>Jul</span><span class="on">Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+        </div>
+        <div class="phone sm">
+          <img src="assets/screen-progress.png" alt="USkin progress screen plotting skin scores over time" width="415" height="900" loading="lazy">
+        </div>
+      </div>
+      <h2 class="feat-title">Watch your skin change,<br>week after week</h2>
+    </article>
+
+  </section>
+
+  <!-- ================= INGREDIENTS ================= -->
+  <section class="ingredients">
+    <div class="sec-head">
+      <h2>The ingredients, in<br>words people actually use</h2>
+      <p>Scan a barcode and USkin names what's inside — and what it's for — without the label jargon.</p>
+    </div>
+    <div class="ing-grid">
+      <article class="ing rise">
+        <span class="orb o1" aria-hidden="true"></span>
+        <h3>Retinol</h3>
+        <p>A form of vitamin A, used for texture and fine lines.</p>
+      </article>
+      <article class="ing rise">
+        <span class="orb o2" aria-hidden="true"></span>
+        <h3>Niacinamide</h3>
+        <p>A form of vitamin B3, often used for tone and oiliness.</p>
+      </article>
+      <article class="ing rise">
+        <span class="orb o3" aria-hidden="true"></span>
+        <h3>Squalane</h3>
+        <p>An emollient, usually plant-derived, that softens skin.</p>
+      </article>
+      <article class="ing rise">
+        <span class="orb o4" aria-hidden="true"></span>
+        <h3>Salicylic acid</h3>
+        <p>A BHA that works inside the pore rather than on top.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= HOW THE SCORE WORKS ================= -->
+  <section class="score-how">
+    <div class="sec-head">
+      <h2>What the number<br>is actually made of</h2>
+      <p>Your USkin Score is a 0–100 read built from six things the camera can see. No mystery, no black box.</p>
+    </div>
+    <ol class="metrics">
+      <li class="rise"><b>Hydration</b><span>How well your skin is holding on to moisture.</span></li>
+      <li class="rise"><b>Evenness</b><span>How consistent your tone is across your face.</span></li>
+      <li class="rise"><b>Pores</b><span>How visible they are, especially around the T-zone.</span></li>
+      <li class="rise"><b>Redness</b><span>Flushing and visible irritation.</span></li>
+      <li class="rise"><b>Wrinkles</b><span>Fine lines around the eyes and forehead.</span></li>
+      <li class="rise"><b>Dark circles</b><span>Shadowing and colour under the eyes.</span></li>
+    </ol>
+    <p class="score-note">USkin gives cosmetic, informational insights — a well-informed second opinion, not a diagnosis. Good, even lighting and bare skin give the most reliable read.</p>
+  </section>
+
+  <!-- ================= STEPS ================= -->
+  <section class="steps-wrap" id="how">
+    <div class="sec-head center">
+      <h2>Three taps to a routine<br>that fits</h2>
+      <p>No forms to fill in, no appointment to book, no scrolling reviews written for someone else's face.</p>
     </div>
     <ol class="steps">
-      <li class="step">
-        <span class="num">01</span>
-        <h3>Snap a selfie</h3>
-        <p>Front camera, decent light, bare skin. That's the whole setup.</p>
-      </li>
-      <li class="step">
-        <span class="num">02</span>
-        <h3>Get your score</h3>
-        <p>AI reads hydration, evenness, pores, redness, wrinkles and dark circles — and tells you which to focus on first.</p>
-      </li>
-      <li class="step">
-        <span class="num">03</span>
-        <h3>Scan your shelf</h3>
-        <p>Point at any product barcode to see whether it suits the skin you actually have.</p>
-      </li>
+      <li class="step rise"><span class="num">01</span><h3>Snap a selfie</h3><p>Front camera, decent light, bare skin. That's the whole setup.</p></li>
+      <li class="step rise"><span class="num">02</span><h3>Get your score</h3><p>AI reads all six metrics and tells you which one to focus on first.</p></li>
+      <li class="step rise"><span class="num">03</span><h3>Scan your shelf</h3><p>Point at any product barcode to see whether it suits the skin you actually have.</p></li>
     </ol>
   </section>
 
-  <!-- FEATURES -->
-  <section class="section pt0" id="features">
-    <div class="section-head">
-      <h2>One app for everything your skin needs.</h2>
-      <p>USkin reads your skin, checks your shelf, and builds a routine that's actually yours.</p>
-    </div>
-    <div class="features">
-      <article class="card tint-pink">
-        <span class="tag">Face scan</span>
-        <h3>See your skin score</h3>
-        <p>A selfie becomes a 0–100 USkin Score across hydration, evenness, pores, redness, wrinkles and dark circles — with focus areas just for you.</p>
-        <div class="shot"><img src="assets/screen-score.png" alt="Skin score screen" loading="lazy"></div>
-      </article>
-      <article class="card tint-teal">
-        <span class="tag">Product scan</span>
-        <h3>Know before you buy</h3>
-        <p>Scan a barcode for an instant safety rating, plain-language ingredient flags, and a “matches your skin” verdict tuned to your profile.</p>
-        <div class="shot"><img src="assets/screen-product.png" alt="Product safety screen" loading="lazy"></div>
-      </article>
-      <article class="card">
-        <span class="tag">Progress</span>
-        <h3>Track your glow</h3>
-        <p>Every scan plots your skin over time, so you can see what's working — and keep your routine consistent with gentle nudges.</p>
-        <div class="shot"><img src="assets/screen-progress.png" alt="Progress tracking screen" loading="lazy"></div>
-      </article>
-    </div>
-  </section>
-
-  <!-- QUOTE -->
-  <div class="quote-wrap">
-    <div class="quote">
-      <img class="mark" src="assets/mark-white.png" alt="">
-      <p>Skincare shouldn't be a guessing game.<br><b>USkin reads your skin so you don't have to.</b></p>
-    </div>
-  </div>
-
-  <!-- PRICING -->
-  <section class="section" id="pricing">
-    <div class="section-head center">
-      <h2>Try it free for three days.</h2>
+  <!-- ================= PRICING ================= -->
+  <section class="pricing" id="pricing">
+    <div class="sec-head center">
+      <h2>Try it free for<br>three days</h2>
       <p>Download and scan for free. Unlock unlimited scans, your routine and progress tracking with USkin Pro — cancel any time before the trial ends and you're not charged.</p>
     </div>
-    <div class="price-card">
+    <div class="price-card rise">
       <div class="price-head">
         <span class="tag">USkin Pro</span>
-        <div class="price-figure"><b>3 days</b><span>free, then $29.99/year</span></div>
+        <div class="price-figure"><b>3 days free</b><span>then $29.99 / year</span></div>
       </div>
       <ul class="price-list">
         <li>Unlimited AI face scans</li>
@@ -164,102 +214,118 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section pt0" id="faq">
-    <div class="section-head"><h2>Questions, answered.</h2></div>
+  <!-- ================= FAQ ================= -->
+  <section class="faq-wrap" id="faq">
+    <h2 class="faq-h">FAQ</h2>
     <div class="faq">
       <details>
-        <summary>Is my selfie stored anywhere?</summary>
+        <summary>Is my selfie stored anywhere?<span class="ic" aria-hidden="true"></span></summary>
         <p>No. Your photo is sent over an encrypted connection to be analysed and is never saved to our servers — only the resulting scores and notes are kept in your account, and you can delete them at any time from your Profile.</p>
       </details>
       <details>
-        <summary>How accurate is the skin score?</summary>
+        <summary>How accurate is the skin score?<span class="ic" aria-hidden="true"></span></summary>
         <p>USkin gives cosmetic, informational insights based on what's visible in your photo — think of it as a well-informed second opinion, not a diagnosis. Good, even lighting and bare skin give the most reliable read.</p>
       </details>
       <details>
-        <summary>Do I get charged during the free trial?</summary>
+        <summary>Do I get charged during the free trial?<span class="ic" aria-hidden="true"></span></summary>
         <p>No. The 3-day trial is free, and you can cancel any time before it ends directly in the App Store. If you don't cancel, the subscription renews automatically at the price shown.</p>
       </details>
       <details>
-        <summary>Which products can I scan?</summary>
+        <summary>Which products can I scan?<span class="ic" aria-hidden="true"></span></summary>
         <p>Any skincare or cosmetic product with a barcode. USkin looks up the ingredients, flags the ones worth knowing about in plain language, and tells you whether it suits your skin profile.</p>
       </details>
       <details>
-        <summary>Is there an Android version?</summary>
+        <summary>Is there an Android version?<span class="ic" aria-hidden="true"></span></summary>
         <p>Not yet — USkin is currently iPhone only, and needs iOS 16.4 or later.</p>
       </details>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="final-inner">
-      <img class="cta-icon" src="assets/icon.png" alt="">
-      <h2>Find out what your skin<br>has been trying to tell you.</h2>
-      <a class="btn-store light" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-        <span><small>Download on the</small><b>App Store</b></span>
-      </a>
-      <p class="cta-sub">Free · 3-day trial · iPhone, iOS 16.4+</p>
+  <!-- ================= CLOSING ================= -->
+  <section class="closer">
+    <img class="closer-icon" src="assets/icon.png" alt="" width="96" height="96" loading="lazy">
+    <h2>So — do you actually<br>know what your<br>skin needs?</h2>
+    <div class="yesno">
+      <a class="pill-btn" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">Yes</a>
+      <a class="pill-btn alt" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">Not really</a>
     </div>
+    <p class="closer-sub">Either way, it takes one selfie to find out.</p>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="site">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a class="brand" href="/"><img src="assets/icon.png" alt=""><b>USkin</b></a>
-        <p>An AI skin &amp; cosmetics scanner for iPhone. Cosmetic, educational insights — not medical advice.</p>
-      </div>
-      <div class="foot-cols">
-        <div>
-          <h4>Product</h4>
-          <a href="#how">How it works</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">App Store</a>
-        </div>
-        <div>
-          <h4>Legal</h4>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Use</a>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <a href="mailto:guillemmj33@gmail.com">guillemmj33@gmail.com</a>
-        </div>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 USkin · Guillem Martínez</span>
-      <span>uskincare.eu</span>
-    </div>
-    <p class="disclaimer">USkin provides cosmetic and informational insights only. It is not a medical device and does not diagnose, treat, or prevent any condition. For any skin concern, consult a dermatologist.</p>
-  </footer>
+</main>
 
-</div>
+<!-- ================= FOOTER ================= -->
+<footer class="site">
+  <p class="foot-big">
+    Get it on <a href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">the App&nbsp;Store</a>, read the <a href="privacy.html">Privacy&nbsp;Policy</a> and <a href="terms.html">Terms</a>, or just <a href="mailto:guillemmj33@gmail.com">say&nbsp;hi</a>.
+  </p>
+  <div class="foot-bottom">
+    <span>© 2026 USkin · Guillem Martínez</span>
+    <span>uskincare.eu</span>
+  </div>
+  <p class="disclaimer">USkin provides cosmetic and informational insights only. It is not a medical device and does not diagnose, treat, or prevent any condition. For any skin concern, consult a dermatologist.</p>
+</footer>
 
-<!-- sticky mobile download bar -->
 <a class="mobile-bar" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">
-  <img src="assets/icon.png" alt="">
+  <img src="assets/icon.png" alt="" width="36" height="36">
   <span><b>USkin — Face Scanner</b><small>Free · 3-day trial</small></span>
   <em>Get</em>
 </a>
 
 <script>
-  const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+  /* nav shadow on scroll */
+  var nav = document.getElementById('nav');
+  var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 8); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 
-  // Reveal sections as they enter the viewport. Progressive enhancement: the
-  // .rise class is only ever added by JS, and only when IntersectionObserver
-  // exists — so without it (or without JS) the content simply renders visible.
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.section-head, .step, .card, .price-card, .faq details, .final-inner').forEach((el) => {
-      el.classList.add('rise'); io.observe(el);
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Scroll-linked word reveal on the statement paragraph. Progressive
+     enhancement: without JS the paragraph renders fully opaque as normal text. */
+  var stmt = document.getElementById('statement');
+  if (stmt && !reduced) {
+    var words = stmt.textContent.split(' ');
+    stmt.textContent = '';
+    words.forEach(function (w, i) {
+      var s = document.createElement('span');
+      s.className = 'w';
+      s.textContent = w;
+      stmt.appendChild(s);
+      if (i < words.length - 1) stmt.appendChild(document.createTextNode(' '));
+    });
+    var spans = stmt.querySelectorAll('.w');
+    var ticking = false;
+    var paint = function () {
+      ticking = false;
+      var r = stmt.getBoundingClientRect();
+      var vh = window.innerHeight;
+      /* 0 when the block sits at the bottom of the viewport, 1 once it has
+         travelled to the upper third — words light up across that span. */
+      var p = (vh * 0.85 - r.top) / (vh * 0.55 + r.height * 0.5);
+      p = Math.max(0, Math.min(1, p));
+      var lit = p * (spans.length + 6);
+      for (var i = 0; i < spans.length; i++) {
+        spans[i].style.opacity = Math.max(0.13, Math.min(1, lit - i));
+      }
+    };
+    var request = function () { if (!ticking) { ticking = true; requestAnimationFrame(paint); } };
+    window.addEventListener('scroll', request, { passive: true });
+    window.addEventListener('resize', request);
+    paint();
+  }
+
+  /* reveal-on-enter for cards and rows */
+  if ('IntersectionObserver' in window && !reduced) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.rise, .sec-head, .faq details').forEach(function (el, i) {
+      el.style.transitionDelay = (i % 4) * 60 + 'ms';
+      el.classList.add('pre');
+      io.observe(el);
     });
   }
 </script>
