@@ -34,9 +34,8 @@
       <img src="assets/icon.png" alt="" width="34" height="34">
       <b>USkin</b>
     </a>
-    <a class="btn-store sm" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-      <span><small>Download on the</small><b>App Store</b></span>
+      <a class="appstore" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">
+      <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="132" height="44">
     </a>
   </div>
 </nav>
@@ -56,10 +55,13 @@
 
     <div class="stage lift5">
       <div class="stage-fade">
-        <div class="glow" aria-hidden="true"></div>
-
         <div class="portrait-wrap">
-          <img class="portrait" src="assets/hero-portrait.webp" alt="" width="640" height="1138" fetchpriority="high">
+          <video class="portrait" id="heroLoop"
+                 poster="assets/hero-poster.webp"
+                 width="720" height="1280"
+                 muted loop playsinline preload="auto" aria-hidden="true">
+            <source src="assets/hero-loop.mp4" type="video/mp4">
+          </video>
 
           <!-- Translucent phone: the face reads straight through it, and the
                app's own UI is rebuilt as floating layers rather than a flat
@@ -206,12 +208,12 @@
       <p>Your USkin Score is a 0–100 read built from six things the camera can see. No mystery, no black box.</p>
     </div>
     <ol class="metrics">
-      <li class="rise"><b>Hydration</b><span>How well your skin is holding on to moisture.</span></li>
-      <li class="rise"><b>Evenness</b><span>How consistent your tone is across your face.</span></li>
-      <li class="rise"><b>Pores</b><span>How visible they are, especially around the T-zone.</span></li>
-      <li class="rise"><b>Redness</b><span>Flushing and visible irritation.</span></li>
-      <li class="rise"><b>Wrinkles</b><span>Fine lines around the eyes and forehead.</span></li>
-      <li class="rise"><b>Dark circles</b><span>Shadowing and colour under the eyes.</span></li>
+      <li class="rise"><span class="m-ico" aria-hidden="true"><i class="d1"></i></span><b>Hydration</b><span>How well your skin is holding on to moisture.</span></li>
+      <li class="rise"><span class="m-ico" aria-hidden="true"><i class="d2"></i></span><b>Evenness</b><span>How consistent your tone is across your face.</span></li>
+      <li class="rise"><span class="m-ico" aria-hidden="true"><i class="d3"></i></span><b>Pores</b><span>How visible they are, especially around the T-zone.</span></li>
+      <li class="rise"><span class="m-ico" aria-hidden="true"><i class="d4"></i></span><b>Redness</b><span>Flushing and visible irritation.</span></li>
+      <li class="rise"><span class="m-ico" aria-hidden="true"><i class="d5"></i></span><b>Wrinkles</b><span>Fine lines around the eyes and forehead.</span></li>
+      <li class="rise"><span class="m-ico" aria-hidden="true"><i class="d6"></i></span><b>Dark circles</b><span>Shadowing and colour under the eyes.</span></li>
     </ol>
     <p class="score-note">USkin gives cosmetic, informational insights — a well-informed second opinion, not a diagnosis. Good, even lighting and bare skin give the most reliable read.</p>
   </section>
@@ -247,9 +249,8 @@
         <li>Progress tracking over time</li>
         <li>Cancel anytime in the App Store</li>
       </ul>
-      <a class="btn-store wide" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-        <span><small>Download on the</small><b>App Store</b></span>
+      <a class="appstore big" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">
+        <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="168" height="56">
       </a>
       <p class="price-foot">A weekly plan is also available in the app. Prices shown in USD; your local price appears at checkout.</p>
     </div>

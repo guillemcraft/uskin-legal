@@ -113,6 +113,12 @@ h1, h2, h3, .num, .price-figure b {
 /* ---------------------------------------------------------
    BUTTONS
    --------------------------------------------------------- */
+.appstore { display: inline-block; line-height: 0; transition: transform .28s var(--ease), filter .28s var(--ease); }
+.appstore img { width: 132px; height: auto; display: block; }
+.appstore:hover { transform: translateY(-2px); filter: brightness(1.12); }
+.appstore.big { display: block; margin: 0 auto; }
+.appstore.big img { width: 168px; }
+
 .btn-store {
   display: inline-flex; align-items: center; gap: 11px;
   padding: 13px 24px 13px 20px;
@@ -176,7 +182,7 @@ h1, h2, h3, .num, .price-figure b {
 
 .hero h1 {
   margin: clamp(20px, 3vw, 30px) auto 0;
-  font-size: clamp(2.6rem, 5.4vw, 4.1rem);
+  font-size: clamp(2.25rem, 4.4vw, 3.35rem);
   line-height: .97;
   letter-spacing: -.03em;
   max-width: 16ch;
@@ -207,21 +213,10 @@ h1, h2, h3, .num, .price-figure b {
 }
 .stage-fade { position: relative; display: flex; justify-content: center; }
 
-.glow {
-  position: absolute; left: 50%; top: 4%;
-  transform: translateX(-50%);
-  width: min(760px, 112vw); aspect-ratio: 1 / .9;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 44% 46%, rgba(59,185,166,.26), rgba(59,185,166,0) 62%),
-    radial-gradient(circle at 64% 58%, rgba(229,154,152,.28), rgba(229,154,152,0) 58%);
-  filter: blur(12px);
-  animation: breathe 13s ease-in-out infinite;
-}
-@keyframes breathe {
-  0%,100% { transform: translateX(-50%) scale(1);     opacity: 1;   }
-  50%     { transform: translateX(-50%) scale(1.05);  opacity: .86; }
-}
+/* No wash behind the hero. The portrait is an opaque white rectangle, so any
+   colour back there is punched out along its straight edges and reads as a
+   visible panel — which is exactly the "background" that kept showing up.
+   Pure white behind it means there is no edge to see. */
 
 .portrait-wrap {
   position: relative;
@@ -558,23 +553,50 @@ h1, h2, h3, .num, .price-figure b {
   margin: 0 auto;
   padding: clamp(80px, 11vw, 150px) var(--pad) 0;
 }
-.metrics { border-top: 1px solid var(--line); }
-.metrics li {
+/* A six-row table of hairlines read as a spreadsheet; cards give the six
+   metrics the same weight as the rest of the page. */
+.metrics {
   display: grid;
-  grid-template-columns: minmax(180px, 1fr) 2fr;
-  gap: 20px;
-  align-items: baseline;
-  padding: clamp(20px, 2.4vw, 30px) 0;
-  border-bottom: 1px solid var(--line);
-  transition: padding-left .4s var(--ease);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
-.metrics li:hover { padding-left: 12px; }
+.metrics li {
+  padding: clamp(22px, 2.4vw, 30px);
+  background: var(--band);
+  border-radius: var(--r-sm);
+  transition: transform .5s var(--ease), background .5s var(--ease);
+}
+.metrics li:hover { transform: translateY(-4px); background: var(--teal-soft); }
+.m-ico {
+  display: grid; place-items: center;
+  width: 40px; height: 40px;
+  margin-bottom: 18px;
+  border-radius: 13px;
+  background: var(--paper);
+  box-shadow: 0 8px 18px -10px rgba(28,22,18,.35);
+}
+.m-ico i {
+  width: 15px; height: 15px; border-radius: 50%;
+  display: block;
+}
+.d1 { background: linear-gradient(140deg, #8FE0D2, #2A9384); }
+.d2 { background: linear-gradient(140deg, #FBE9E6, #E59A98); }
+.d3 { background: linear-gradient(140deg, #E1EEFF, #7FA9D6); }
+.d4 { background: linear-gradient(140deg, #FFD9C7, #D9736E); }
+.d5 { background: linear-gradient(140deg, #F3F0E6, #C4BBA1); }
+.d6 { background: linear-gradient(140deg, #DCD8F5, #8E86C9); }
 .metrics b {
+  display: block;
   font-family: var(--display);
-  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
-  font-weight: 500; letter-spacing: -.03em;
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  font-weight: 500; letter-spacing: -.028em;
+  margin-bottom: 8px;
 }
-.metrics span { color: var(--ink-2); font-size: clamp(1rem, 1.25vw, 1.1rem); }
+.metrics span:not(.m-ico) {
+  color: var(--ink-2);
+  font-size: 15.5px;
+  line-height: 1.55;
+}
 .score-note {
   margin-top: 30px;
   max-width: 58ch;
@@ -793,7 +815,7 @@ footer.site {
   .steps    { grid-template-columns: 1fr; }
   .step     { min-height: 0; }
   .feat     { min-height: 540px; }
-  .metrics li { grid-template-columns: 1fr; gap: 6px; }
+  .metrics { grid-template-columns: repeat(2, 1fr); }
 
   /* Two cards still share the row here, so each is too narrow to sit the
      phone beside the verdict list — stack them. */
@@ -846,6 +868,10 @@ footer.site {
     padding: 9px 20px; border-radius: 999px;
     background: #fff; color: var(--ink);
   }
+}
+
+@media (max-width: 560px) {
+  .metrics { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 420px) {
