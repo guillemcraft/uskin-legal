@@ -67,7 +67,12 @@
         <div class="glow" aria-hidden="true"></div>
 
         <div class="portrait-wrap">
-          <img class="portrait" src="assets/hero-portrait.webp" alt="" width="933" height="1400" fetchpriority="high">
+          <video class="portrait" id="heroLoop"
+                 poster="assets/hero-poster.webp"
+                 width="720" height="1080"
+                 muted loop playsinline preload="auto" aria-hidden="true">
+            <source src="assets/hero-loop.mp4" type="video/mp4">
+          </video>
 
           <!-- Translucent phone: the face reads straight through it, and the
                app's own UI is rebuilt as floating layers rather than a flat
@@ -349,6 +354,13 @@
     window.addEventListener('scroll', request, { passive: true });
     window.addEventListener('resize', request);
     paint();
+  }
+
+  /* The hero loop is opt-in: without this it stays on its poster frame. */
+  var loop = document.getElementById('heroLoop');
+  if (loop && !reduced) {
+    var playLoop = function () { var p = loop.play(); if (p && p.catch) { p.catch(function () {}); } };
+    if (loop.readyState >= 2) { playLoop(); } else { loop.addEventListener('loadeddata', playLoop, { once: true }); }
   }
 
   /* Hero: draw the score ring, fill the metric bars, count the number up.

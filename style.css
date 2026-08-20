@@ -170,8 +170,8 @@ h1, h2, h3, .num, .price-figure b {
 
 .hero h1 {
   margin: clamp(20px, 3vw, 30px) auto 0;
-  font-size: clamp(2.9rem, 7.2vw, 5.4rem);
-  line-height: .96;
+  font-size: clamp(2.6rem, 5.4vw, 4.1rem);
+  line-height: .97;
   letter-spacing: -.03em;
   max-width: 16ch;
 }
@@ -183,7 +183,7 @@ h1, h2, h3, .num, .price-figure b {
   color: var(--ink-2);
 }
 .hero-cta {
-  margin-top: clamp(26px, 3.4vw, 38px);
+  margin-top: clamp(18px, 2.2vw, 26px);
   display: flex; flex-direction: column; align-items: center; gap: 14px;
 }
 .hero-meta { font-size: 14px; color: var(--faint); }
@@ -193,9 +193,9 @@ h1, h2, h3, .num, .price-figure b {
        rebuilt as floating layers. ---- */
 .stage {
   position: relative;
-  margin: clamp(-4px, -0.5vw, 0px) auto 0;
+  margin: clamp(-46px, -3.6vw, -14px) auto 0;
   max-width: 980px;
-  padding-top: clamp(20px, 3vw, 38px);
+  padding-top: 0;
 }
 .stage-fade { position: relative; display: flex; justify-content: center; }
 
@@ -221,6 +221,7 @@ h1, h2, h3, .num, .price-figure b {
   aspect-ratio: 933 / 1400;
 }
 .portrait {
+  display: block;
   width: 100%; height: 100%; object-fit: cover;
   /* Vignette the photo into the page on all four sides, the way lovi.care
      melts its hero shot into white. */
