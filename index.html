@@ -7,6 +7,8 @@
 <title>USkin — AI Skin &amp; Cosmetics Scanner</title>
 <meta name="description" content="One selfie, six metrics, zero jargon. USkin reads your skin, scans any product, and tracks how you change over time. Free on the App Store.">
 <link rel="icon" href="assets/favicon.png">
+<link rel="canonical" href="https://uskincare.eu/">
+<meta name="theme-color" content="#FFFFFF">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://uskincare.eu/">
 <meta property="og:title" content="USkin — AI Skin &amp; Cosmetics Scanner">
@@ -65,13 +67,14 @@
         <div class="glow" aria-hidden="true"></div>
 
         <div class="portrait-wrap">
-          <img class="portrait" src="assets/hero-portrait.jpg" alt="" width="933" height="1400" fetchpriority="high">
+          <img class="portrait" src="assets/hero-portrait.webp" alt="" width="933" height="1400" fetchpriority="high">
 
           <!-- Translucent phone: the face reads straight through it, and the
                app's own UI is rebuilt as floating layers rather than a flat
                screenshot (which would put a second status bar inside a frame). -->
           <div class="glass" aria-hidden="true">
             <span class="notch"></span>
+            <span class="scanline"></span>
             <p class="g-label">Your USkin Score</p>
 
             <div class="g-ring">
@@ -95,7 +98,7 @@
 
   <!-- ================= STATEMENT ================= -->
   <section class="statement">
-    <p class="words" id="statement">USkin is a complete read on your skin. Take one selfie for a score across six metrics, scan any product to see whether it actually fits you, and watch the numbers move week after week.</p>
+    <p class="words" id="statement">USkin is a complete read on your skin. Take one selfie for a <svg class="gly" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="gly-a" gradientUnits="userSpaceOnUse" x1="2" y1="2" x2="22" y2="22"><stop offset="0" stop-color="#7BD8C8"/><stop offset="1" stop-color="#1F7466"/></linearGradient></defs><circle cx="12" cy="12" r="10.2" fill="none" stroke="url(#gly-a)" stroke-width="3.2"/><circle cx="12" cy="12" r="3.4" fill="url(#gly-a)"/></svg> score across six metrics, <svg class="gly" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="gly-b" gradientUnits="userSpaceOnUse" x1="4" y1="2" x2="20" y2="22"><stop offset="0" stop-color="#F0A9A7"/><stop offset="1" stop-color="#C86F6C"/></linearGradient></defs><rect x="4.4" y="1.8" width="15.2" height="20.4" rx="5.2" fill="url(#gly-b)"/><path d="M8.4 12h7.2" stroke="#fff" stroke-width="2.3" stroke-linecap="round"/></svg> scan any product to see whether it actually fits you, and watch the numbers move <svg class="gly gly-lg" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="gly-c" gradientUnits="userSpaceOnUse" x1="2" y1="2" x2="22" y2="22"><stop offset="0" stop-color="#5FD3C0"/><stop offset="1" stop-color="#E08A88"/></linearGradient></defs><path d="M12 .9c1.05 5.85 4.25 9.05 10.1 10.1-5.85 1.05-9.05 4.25-10.1 10.1-1.05-5.85-4.25-9.05-10.1-10.1C7.75 9.95 10.95 6.75 12 .9Z" fill="url(#gly-c)"/></svg> week after week.</p>
   </section>
 
   <!-- ================= FEATURE: FACE SCAN ================= -->
@@ -104,7 +107,7 @@
     <article class="feat rise">
       <div class="feat-visual scan-visual">
         <div class="phone sm">
-          <img src="assets/screen-score.png" alt="USkin skin score breakdown" width="415" height="900" loading="lazy">
+          <img src="assets/screen-score.webp" alt="USkin skin score breakdown" width="415" height="900" loading="lazy">
         </div>
         <div class="marquees" aria-hidden="true">
           <div class="marquee">
@@ -127,7 +130,7 @@
     <article class="feat tint-teal rise">
       <div class="feat-visual product-visual">
         <div class="phone sm">
-          <img src="assets/screen-product.png" alt="USkin product safety screen showing an ingredient breakdown" width="415" height="900" loading="lazy">
+          <img src="assets/screen-product.webp" alt="USkin product safety screen showing an ingredient breakdown" width="415" height="900" loading="lazy">
         </div>
         <ul class="verdicts">
           <li class="verdict good"><b>Fits your skin</b><small>Based on your last scan</small></li>
@@ -144,7 +147,7 @@
           <span>Jan</span><span>Feb</span><span class="on">Mar</span><span>Apr</span><span class="on">May</span><span>Jun</span><span>Jul</span><span class="on">Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
         </div>
         <div class="phone sm">
-          <img src="assets/screen-progress.png" alt="USkin progress screen plotting skin scores over time" width="415" height="900" loading="lazy">
+          <img src="assets/screen-progress.webp" alt="USkin progress screen plotting skin scores over time" width="415" height="900" loading="lazy">
         </div>
       </div>
       <h2 class="feat-title">Watch your skin change,<br>week after week</h2>
@@ -305,27 +308,36 @@
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* Scroll-linked word reveal on the statement paragraph. Progressive
-     enhancement: without JS the paragraph renders fully opaque as normal text. */
+  /* Scroll-linked word reveal on the statement paragraph. Walks child nodes
+     rather than splitting textContent, so the inline glyph SVGs survive and
+     light up alongside the words. Without JS the paragraph is simply opaque. */
   var stmt = document.getElementById('statement');
   if (stmt && !reduced) {
-    var words = stmt.textContent.split(' ');
-    stmt.textContent = '';
-    words.forEach(function (w, i) {
-      var s = document.createElement('span');
-      s.className = 'w';
-      s.textContent = w;
-      stmt.appendChild(s);
-      if (i < words.length - 1) stmt.appendChild(document.createTextNode(' '));
+    var frag = document.createDocumentFragment();
+    Array.prototype.slice.call(stmt.childNodes).forEach(function (node) {
+      if (node.nodeType === 3) {
+        node.textContent.split(/(\s+)/).forEach(function (part) {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          var w = document.createElement('span');
+          w.className = 'w';
+          w.textContent = part;
+          frag.appendChild(w);
+        });
+      } else {
+        if (node.classList) node.classList.add('w');
+        frag.appendChild(node);
+      }
     });
+    while (stmt.firstChild) { stmt.removeChild(stmt.firstChild); }
+    stmt.appendChild(frag);
+
     var spans = stmt.querySelectorAll('.w');
     var ticking = false;
     var paint = function () {
       ticking = false;
       var r = stmt.getBoundingClientRect();
       var vh = window.innerHeight;
-      /* 0 when the block sits at the bottom of the viewport, 1 once it has
-         travelled to the upper third — words light up across that span. */
       var p = (vh * 0.85 - r.top) / (vh * 0.55 + r.height * 0.5);
       p = Math.max(0, Math.min(1, p));
       var lit = p * (spans.length + 6);
@@ -337,6 +349,32 @@
     window.addEventListener('scroll', request, { passive: true });
     window.addEventListener('resize', request);
     paint();
+  }
+
+  /* Hero: draw the score ring, fill the metric bars, count the number up.
+     The CSS resting state is already the finished state, so this only runs
+     when motion is welcome — otherwise the hero just renders complete. */
+  if (!reduced) {
+    var stage = document.querySelector('.stage');
+    var num = document.querySelector('.g-num b');
+    if (stage) {
+      window.setTimeout(function () { stage.classList.add('anim'); }, 260);
+    }
+    if (num) {
+      var target = parseInt(num.textContent, 10) || 0;
+      var t0 = null, DUR = 1500, DELAY = 500;
+      num.textContent = '0';
+      var step = function (ts) {
+        if (t0 === null) t0 = ts;
+        var e = ts - t0 - DELAY;
+        if (e < 0) { requestAnimationFrame(step); return; }
+        var k = Math.min(1, e / DUR);
+        k = 1 - Math.pow(1 - k, 3);
+        num.textContent = Math.round(target * k);
+        if (k < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
   }
 
   /* reveal-on-enter for cards and rows */
