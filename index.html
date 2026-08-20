@@ -47,20 +47,12 @@
   <header class="hero">
     <a class="badge lift1" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener">
       <img src="assets/icon.png" alt="" width="22" height="22">
-      Now on the App Store
+      Free for 3 days on iPhone
       <svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
 
     <h1 class="lift2">Your skin,<br>finally<br><span class="ink-teal">understood.</span></h1>
     <p class="lede lift3">One selfie. Six metrics. Zero jargon.</p>
-
-    <div class="hero-cta lift4">
-      <a class="btn-store" href="https://apps.apple.com/app/id6778808846" target="_blank" rel="noopener" aria-label="Download USkin on the App Store">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-        <span><small>Download on the</small><b>App Store</b></span>
-      </a>
-      <p class="hero-meta">Free to download · 3-day trial · iPhone, iOS 16.4+</p>
-    </div>
 
     <div class="stage lift5">
       <div class="stage-fade">
@@ -77,6 +69,7 @@
             <span class="scanline"></span>
             <p class="g-label">Your USkin Score</p>
 
+            <div class="g-panel"></div>
             <div class="g-ring">
               <svg viewBox="0 0 100 100">
                 <circle class="g-track" cx="50" cy="50" r="43"/>
@@ -91,6 +84,27 @@
               <li><span>Pores</span><i style="--v:75%"></i><b>75</b></li>
             </ul>
           </div>
+
+          <!-- Callouts with leader lines, in the portrait's own coordinates
+               (the wrap is exactly 640x1138) so the dots land on the face. -->
+          <svg class="leaders" viewBox="0 0 640 1138" fill="none" aria-hidden="true">
+            <path d="M150 268 C 240 268, 260 286, 322 302"/>
+            <path d="M498 452 C 452 452, 430 440, 392 428"/>
+            <path d="M158 566 C 210 566, 226 528, 262 498"/>
+            <circle cx="322" cy="302" r="4.5"/>
+            <circle cx="392" cy="428" r="4.5"/>
+            <circle cx="262" cy="498" r="4.5"/>
+          </svg>
+
+          <figure class="callout ca" aria-hidden="true">
+            <b>Hydration</b><span class="cpill good">80 · Great</span>
+          </figure>
+          <figure class="callout cb" aria-hidden="true">
+            <b>Redness</b><span class="cpill good">Low</span>
+          </figure>
+          <figure class="callout cc" aria-hidden="true">
+            <b>Evenness</b><span class="cpill focus">Your focus</span>
+          </figure>
         </div>
       </div>
     </div>
