@@ -275,7 +275,7 @@ h1, h2, h3, .num, .price-figure b {
 .glass::before, .glass::after {
   content: ''; position: absolute; left: 0; right: 0; pointer-events: none;
 }
-.glass::before { top: 0;    height: 34%; background: linear-gradient(to bottom, rgba(24,20,17,.5), transparent); }
+.glass::before { top: 0;    height: 30%; background: linear-gradient(to bottom, rgba(24,20,17,.38), transparent); }
 .glass::after  { bottom: 0; height: 46%; background: linear-gradient(to top,    rgba(24,20,17,.58), transparent); }
 
 .notch {
