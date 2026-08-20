@@ -217,28 +217,20 @@ h1, h2, h3, .num, .price-figure b {
 
 .portrait-wrap {
   position: relative;
-  width: min(600px, 96vw);
-  aspect-ratio: 933 / 1400;
+  width: min(540px, 94vw);
+  aspect-ratio: 640 / 1138;
 }
 .portrait {
   display: block;
   width: 100%; height: 100%; object-fit: cover;
-  /* Vignette the photo into the page on all four sides, the way lovi.care
-     melts its hero shot into white. */
-  -webkit-mask-image:
-    linear-gradient(to bottom, transparent 0%, #000 13%, #000 72%, transparent 100%),
-    linear-gradient(to right,  transparent 0%, #000 15%, #000 85%, transparent 100%);
-          mask-image:
-    linear-gradient(to bottom, transparent 0%, #000 13%, #000 72%, transparent 100%),
-    linear-gradient(to right,  transparent 0%, #000 15%, #000 85%, transparent 100%);
-  -webkit-mask-composite: source-in;
-          mask-composite: intersect;
+  /* The source is already cut out on white and dissolves at the shoulders,
+     so no compositing mask is needed here. */
 }
 
 .glass {
   position: absolute; left: 50%; top: 16%;
   transform: translateX(-50%);
-  width: 54%; aspect-ratio: 9 / 19.3;
+  width: 52%; aspect-ratio: 9 / 19.3;
   border-radius: 13% / 6%;
   border: 1.5px solid rgba(255,255,255,.5);
   background: rgba(255,255,255,.05);
@@ -275,12 +267,12 @@ h1, h2, h3, .num, .price-figure b {
     inset 0 0 0 1px rgba(255,255,255,.15);
 }
 .phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 36px; }
-/* Scrims so the white UI reads over a high-key photo. */
-.glass::before, .glass::after {
-  content: ''; position: absolute; left: 0; right: 0; pointer-events: none;
+/* A whisper of lift at the very top only, so the frame still reads as glass. */
+.glass::before {
+  content: ''; position: absolute; left: 0; right: 0; top: 0; height: 18%;
+  background: linear-gradient(to bottom, rgba(20,17,15,.16), transparent);
+  pointer-events: none;
 }
-.glass::before { top: 0;    height: 30%; background: linear-gradient(to bottom, rgba(24,20,17,.38), transparent); }
-.glass::after  { bottom: 0; height: 46%; background: linear-gradient(to top,    rgba(24,20,17,.58), transparent); }
 
 .scanline {
   position: absolute; left: 7%; right: 7%; z-index: 3;
@@ -311,7 +303,8 @@ h1, h2, h3, .num, .price-figure b {
   font-family: var(--display);
   font-size: clamp(9px, 1.05vw, 12px);
   font-weight: 500; letter-spacing: .16em; text-transform: uppercase;
-  color: rgba(255,255,255,.94);
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(20,17,15,.5);
 }
 .g-ring {
   position: absolute; left: 50%; top: 74%; z-index: 2;
@@ -321,21 +314,20 @@ h1, h2, h3, .num, .price-figure b {
 }
 .g-ring svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
 .g-ring circle { fill: none; stroke-width: 7; stroke-linecap: round; }
-.g-track { stroke: rgba(255,255,255,.3); }
-.g-fill  { stroke: var(--teal); stroke-dasharray: 270; stroke-dashoffset: 59; }
+.g-track { stroke: rgba(20,17,15,.16); }
+.g-fill  { stroke: var(--teal-dk); stroke-dasharray: 270; stroke-dashoffset: 59; }
 .stage.anim .g-fill { animation: ringDraw 1.5s .5s cubic-bezier(.2,.7,.2,1) both; }
 @keyframes ringDraw { from { stroke-dashoffset: 270; } to { stroke-dashoffset: 59; } }
 .g-num { display: grid; place-items: center; line-height: 1; }
 .g-num b {
   font-family: var(--display);
   font-size: clamp(15px, 2.1vw, 24px);
-  font-weight: 500; color: #fff;
-  text-shadow: 0 2px 12px rgba(20,17,15,.45);
+  font-weight: 500; color: var(--ink);
 }
 .g-num small {
   margin-top: 3px;
   font-size: clamp(8px, .95vw, 11px);
-  color: rgba(255,255,255,.85);
+  color: var(--ink-2);
 }
 .g-metrics {
   position: absolute; left: 9%; right: 9%; bottom: 6%; z-index: 2;
@@ -345,14 +337,14 @@ h1, h2, h3, .num, .price-figure b {
   display: grid; grid-template-columns: auto 1fr auto;
   align-items: center; gap: 7px;
   font-size: clamp(7.5px, .82vw, 10px);
-  color: rgba(255,255,255,.92);
+  color: var(--ink);
 }
 .g-metrics span { font-weight: 500; }
 .g-metrics b { font-weight: 500; }
 .g-metrics i {
   height: clamp(3px, .34vw, 4px);
   border-radius: 999px;
-  background: rgba(255,255,255,.28);
+  background: rgba(20,17,15,.14);
   position: relative;
 }
 .g-metrics i::before {
