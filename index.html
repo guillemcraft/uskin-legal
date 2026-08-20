@@ -63,16 +63,32 @@
     <div class="stage lift5">
       <div class="stage-fade">
         <div class="glow" aria-hidden="true"></div>
-        <div class="phone">
-          <img src="assets/screen-score.png" alt="The USkin score screen showing a skin score of 78 with a breakdown by metric" width="415" height="900" fetchpriority="high">
+
+        <div class="portrait-wrap">
+          <img class="portrait" src="assets/hero-portrait.jpg" alt="" width="933" height="1400" fetchpriority="high">
+
+          <!-- Translucent phone: the face reads straight through it, and the
+               app's own UI is rebuilt as floating layers rather than a flat
+               screenshot (which would put a second status bar inside a frame). -->
+          <div class="glass" aria-hidden="true">
+            <span class="notch"></span>
+            <p class="g-label">Your USkin Score</p>
+
+            <div class="g-ring">
+              <svg viewBox="0 0 100 100">
+                <circle class="g-track" cx="50" cy="50" r="43"/>
+                <circle class="g-fill"  cx="50" cy="50" r="43"/>
+              </svg>
+              <span class="g-num"><b>78</b><small>Great</small></span>
+            </div>
+
+            <ul class="g-metrics">
+              <li><span>Hydration</span><i style="--v:80%"></i><b>80</b></li>
+              <li><span>Evenness</span><i style="--v:72%"></i><b>72</b></li>
+              <li><span>Pores</span><i style="--v:75%"></i><b>75</b></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="chip chip-a" aria-hidden="true">
-        <span class="ring"><i>78</i></span>
-        <span class="chip-txt"><b>Great skin</b><small>Hydration 80 · Pores 75</small></span>
-      </div>
-      <div class="chip chip-b" aria-hidden="true">
-        <span class="pulse"></span> Scanning… 6 metrics
       </div>
     </div>
   </header>
